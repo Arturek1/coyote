@@ -29,7 +29,8 @@ body.fixed-top {
 }
 
 header.navbar-default {
-  background: url('/img/background.png') repeat;
+  //background: url('/img/background.png') repeat;
+  background-color: #454545;
   border-bottom: 1px solid lighten($border-color, 2%);
 
   // dzieki temu menu jest bardziej wyposrodkowane w pionie
@@ -113,7 +114,8 @@ header.navbar-default {
 #desktop-menu > li > a,
 #mobile-menu > div > a,
 #mobile-menu > form > div > button {
-  color: #3C3C3C;
+  color: #F2F2F2;
+  //color: #3C3C3C;
   font-family: "Open Sans", Arial, sans-serif;
   font-size: 13px;
 
