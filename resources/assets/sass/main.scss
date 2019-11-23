@@ -1,6 +1,15 @@
 @charset "UTF-8";
 
 @import url("//fonts.googleapis.com/css?family=Open+Sans:400,300&subset=latin,latin-ext");
+
+@font-face {
+  font-family: "Horatio";
+  src: url("/fonts/horatio/HoratioD-Medi.eot");
+  src: url("/fonts/horatio/HoratioD-Medi.woff") format("woff")
+  //url("../../../public/fonts/horatio/") format("opentype"),
+  //url("CustomFont.svg#filename") format("svg");
+}
+
 @import "vendor/_bootstrap";
 @import "vendor/font-awesome";
 @import "vendor/prism";
