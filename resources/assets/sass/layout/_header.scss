@@ -16,6 +16,8 @@ body.fixed-top {
 }
 
 :root {
+  --header-font-family: "Open Sans", Arial, sans-serif;
+  --header-font-size: 13px;
   --header-navbar-bg: url('/img/background.png') repeat;
   --header-color: #3c3c3c;
   --header-hover-color: #454545;
@@ -23,6 +25,8 @@ body.fixed-top {
 }
 
 .navbar-dark {
+  --header-font-family: "Horatio", "Open Sans", Arial, sans-serif;
+  --header-font-size: 17px;
   --header-navbar-bg: #454545;
   --header-color: #fafafa;
   --header-hover-color: #80a41a;
@@ -121,8 +125,8 @@ body.fixed-top {
 .nav-mobile > li > a,
 .nav-mobile > li button {
   color: var(--header-color);
-  font-family: "Horatio", "Open Sans", Arial, sans-serif;
-  font-size: 17px;
+  font-family: var(--header-font-family);
+  font-size: var(--header-font-size);
 
   padding-left: 10px;
   padding-right: 10px;

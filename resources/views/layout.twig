@@ -36,7 +36,7 @@
         {% import 'components.forms' as forms %}
 
         <div id="container-fluid">
-            <header class="nav navbar-header navbar-dark {{ auth_guest() or user('allow_sticky_header') ? ' navbar-fixed-top' }}">
+            <header class="nav navbar-header {{ auth_guest() or user('allow_sticky_header') ? ' navbar-fixed-top' }} {{ __dark_theme ? 'navbar-dark' }}">
                 <div class="navbar-border-top"></div>
 
                 <div class="max-width">
@@ -107,7 +107,7 @@
                                     <li class="divider"></li>
 
                                     <li>
-                                        <a href="#">Nowe menu <sup class="label label-new">Beta</sup></a>
+                                        <a href="javascript:" id="js-change-menu">Nowe menu <sup class="label label-new">Beta</sup></a>
                                     </li>
 
                                     <li class="divider"></li>
