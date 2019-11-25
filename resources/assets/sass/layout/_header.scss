@@ -27,7 +27,7 @@ body.fixed-top {
   --header-color: #fafafa;
   --header-hover-color: #80a41a;
   --header-active-bg: #454545;
-  --header-group-link-color: #969696;
+  --header-group-link-color: #9d9d9d; // $gray-lighter
 }
 
 .navbar-header {
@@ -295,7 +295,7 @@ body.fixed-top {
 
     > li > a,
     .btn-sign-out {
-      color: #969696;
+      color: lighten($gray-light, 15%);
 
       &:hover,
       &:focus {
@@ -318,7 +318,7 @@ body.fixed-top {
 
   .dropdown-group {
     .dropdown-group-title {
-      color: #f2f2f2;
+      color: $gray-lighter;
       border-bottom: none;
       font-weight: normal;
     }
