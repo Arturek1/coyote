@@ -8,13 +8,6 @@ body.fixed-top {
   padding-top: $header-height;
 }
 
-// Pasek narzedziowy z menu oraz logo
-// -------------------------------------------------------
-
-.navbar-nav {
-  margin: 0;
-}
-
 :root {
   --header-font-family: "Open Sans", Arial, sans-serif;
   --header-font-size: 13px;
@@ -86,21 +79,6 @@ body.fixed-top {
   // temporary arrow
   position: relative;
 
-  > li {
-    &:hover .dropdown-menu {
-      display: block;
-      top: 100%;
-    }
-
-    > a {
-      &:hover,
-      &:focus {
-        color: var(--header-hover-color);
-        background-color: var(--header-active-bg);
-      }
-    }
-  }
-
   > .active > a {
     &,
     &:hover,
@@ -119,11 +97,29 @@ body.fixed-top {
     background: url('/img/arrow.png') no-repeat;
     z-index: 100;
   }
+
+  > li {
+    // show dropdown menu on hover
+    &:hover .dropdown-menu {
+      display: block;
+      top: 100%;
+    }
+
+    > a {
+      &:hover,
+      &:focus {
+        color: var(--header-hover-color);
+        background-color: var(--header-active-bg);
+      }
+    }
+  }
 }
 
+// @todo ojoj, do refaktoryzacji
 .nav-desktop > li > a,
 .nav-mobile > li > a,
-.nav-mobile > li button {
+.nav-mobile > li button,
+.nav-mobile > li form {
   color: var(--header-color);
   font-family: var(--header-font-family);
   font-size: var(--header-font-size);
@@ -133,7 +129,8 @@ body.fixed-top {
 }
 
 .nav-mobile {
-  margin-right: 0;
+  // usuniecie niepotrzebnego marginesu na urzadzeniach mobilnych
+  margin-top: 0;
 
   .divider {
     @include nav-divider(darken($gray-lighter, 10%));
@@ -195,6 +192,10 @@ body.fixed-top {
 
 // Notifications and private messages button
 // ------------------------------------------
+.nav-auth {
+  margin:0;
+}
+
 .nav-auth > li {
   float: left;
 
@@ -255,18 +256,18 @@ body.fixed-top {
   }
 }
 
-.dropdown-group {
+.mega-menu {
   white-space: nowrap;
   padding: 5px 10px;
 
-  .dropdown-group-title {
+  .mega-menu-title {
     text-transform: uppercase;
     font-weight: bold;
     color: #464646;
     padding-bottom: 5px;
   }
 
-  .dropdown-group-col {
+  .mega-menu-body {
     display: table-cell;
     padding: 10px;
     border-right: 1px solid $border-color;
@@ -320,14 +321,14 @@ body.fixed-top {
     margin: 8px;
   }
 
-  .dropdown-group {
-    .dropdown-group-title {
+  .mega-menu {
+    .mega-menu-title {
       color: $gray-lighter;
       border-bottom: none;
       font-weight: normal;
     }
 
-    .dropdown-group-col {
+    .mega-menu-body {
       border-right-color: #575757;
     }
   }

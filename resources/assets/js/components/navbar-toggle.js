@@ -21,11 +21,11 @@ $(function () {
     });
 
     // tymczasowy test: mozliwosc zmiany menu na nowe/stare
-    $('#js-change-menu').click(() => {
+    $('.js-change-menu').click(() => {
         let header = $('.navbar-header');
 
         header.toggleClass('navbar-dark');
 
-        $.post('/User/Ajax', {'dark_theme': header.hasClass('navbar-dark')});
+        $.post('/User/Settings/Ajax', {'dark_theme': +header.hasClass('navbar-dark')});
     });
 });

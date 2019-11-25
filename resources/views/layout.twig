@@ -107,7 +107,7 @@
                                     <li class="divider"></li>
 
                                     <li>
-                                        <a href="javascript:" id="js-change-menu">Nowe menu <sup class="label label-new">Beta</sup></a>
+                                        <a href="javascript:" class="js-change-menu">Nowe menu <sup class="label label-new">Beta</sup></a>
                                     </li>
 
                                     <li class="divider"></li>
@@ -194,6 +194,14 @@
                                 {% if can('adm-access') %}
                                     <li><a href="{{ route('adm.home') }}"><i class="fa fa-user-secret fa-fw"></i> Panel administracyjny</a></li>
                                 {% endif %}
+
+                                <li class="divider"></li>
+
+                                <li>
+                                    <a href="javascript:" class="js-change-menu">Nowe menu <sup class="label label-new">Beta</sup></a>
+                                </li>
+
+                                <li class="divider"></li>
 
                                 <li>
                                     {{ form_open({url: route('logout')}) }}
